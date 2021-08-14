@@ -15,7 +15,7 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(35rem, 1fr) minmax(35rem, 1fr);
   grid-template-rows: 5rem 30rem;
   grid-template-areas:
     "nav nav"
@@ -25,9 +25,10 @@ header {
 header nav {
   grid-area: nav;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   /* background-color: lawngreen; */
+  padding: 0 5rem;
 }
 
 header .nav-bar {
@@ -44,27 +45,43 @@ header .nav-bar a {
   font-size: 0.8rem;
 }
 
+header .nav-bar a:hover {
+  color: #ef4444;
+}
+
 header .nav-bar li:last-child {
   background-color: #ef4444;
   padding: 0.5rem 1.5rem;
   border-radius: 0.2rem;
+  box-shadow: 0 5px 5px #ddd;
+  cursor: pointer;
+}
+
+header .nav-bar li:last-child:hover {
+  background-color: white;
+  border: 0.1rem solid #ef4444;
 }
 
 header .nav-bar li:last-child a {
   color: white;
 }
 
+header .nav-bar li:last-child:hover a {
+  color: #ef4444;
+}
+
 header .hero-info {
   grid-area: heroInfo;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 5rem;
   gap: 1rem;
+  /* background-color: brown; */
 }
 
 .hero-info .hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .hero-info > p {
@@ -84,22 +101,43 @@ header .hero-info {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.8rem;
+  box-shadow: 0 5px 5px #ddd;
+}
+
+.hero-info .btn-group a:last-child {
+  background-color: #eee;
+  color: black;
+}
+
+.hero-info .btn-group a:last-child:hover {
+  background-color: white;
+  border: 0.1rem solid #777;
+  color: #777;
+}
+
+.hero-info .btn-group a:first-child:hover {
+  background-color: white;
+  border: 0.1rem solid #6366f1;
+  color: #6366f1;
 }
 
 header .hero-img {
   grid-area: heroImg;
   position: relative;
   z-index: 0;
+  /* background-color: aqua; */
 }
 
 header .hero-img svg {
-  transform: scale(0.9);
+  transform: scale(0.8);
+  position: absolute;
+  right: -1.5rem;
 }
 
 header .hero-img::after {
   content: "";
   height: 20rem;
-  width: 30rem;
+  width: 25rem;
   background-color: #6366f1;
   display: block;
   border-top-left-radius: 10rem;
@@ -112,12 +150,13 @@ header .hero-img::after {
 
 .features {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(35rem, 1fr) minmax(35rem, 1fr);
   grid-template-rows: 10rem 5rem 30rem;
   grid-template-areas:
     "featureInfo featureInfo"
     "tab tab"
     "tabContentImg tabContentInfo";
+  padding: 2rem 0 0 0;
 }
 .features .feature-info {
   grid-area: featureInfo;
@@ -157,12 +196,18 @@ header .hero-img::after {
   max-width: 50rem;
   margin: 0 auto;
   /* background-color: teal; */
+  padding-bottom: 1rem;
 }
 
 .tab ul li {
   /* background-color: tomato; */
   padding: 0 3rem;
   color: #777;
+}
+
+.tab ul li:hover {
+  color: #ef4444;
+  cursor: pointer;
 }
 
 .features .tab-content-img {
@@ -176,15 +221,15 @@ header .hero-img::after {
   border-radius: 0.5rem;
   background-color: #ddd;
   position: absolute;
-  right: 0;
+  left: 1.5rem;
   top: 4rem;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .features .tab-content-img::after {
   content: "";
   height: 20rem;
-  width: 35rem;
+  width: 28rem;
   background-color: #6366f1;
   display: block;
   border-top-right-radius: 10rem;
@@ -202,7 +247,7 @@ header .hero-img::after {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 6rem;
+  padding: 5rem;
   gap: 1rem;
 }
 
@@ -221,6 +266,15 @@ header .hero-img::after {
   text-decoration: none;
   border-radius: 0.2rem;
   color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 5px #ddd;
+}
+
+.tab-content-info > a:hover {
+  background-color: white;
+  color: #6366f1;
+  border: 0.1rem solid #6366f1;
 }
 
 .extensions {
@@ -304,10 +358,20 @@ header .hero-img::after {
 .extension button {
   background-color: #6366f1;
   border: none;
+  border-radius: 0.2rem;
   cursor: pointer;
   padding: 1rem;
   color: white;
   letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 5px #ddd;
+}
+
+.extension button:hover {
+  background-color: white;
+  color: #6366f1;
+  border: 0.1rem solid #6366f1;
 }
 
 .faq {
@@ -350,6 +414,11 @@ header .hero-img::after {
   justify-content: space-between;
   border-top: 1px solid #777;
   padding: 1rem 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.faq ul li:hover {
+  color: #ef4444;
 }
 
 .faq ul li:last-child {
@@ -361,8 +430,18 @@ header .hero-img::after {
   padding: 0.8rem 1rem;
   color: white;
   border: none;
+  border-radius: 0.2rem;
   cursor: pointer;
   letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 5px #ddd;
+}
+
+.faq > button:hover {
+  color: #6366f1;
+  background-color: white;
+  border: 0.1rem solid #6366f1;
 }
 
 footer {
@@ -373,6 +452,7 @@ footer {
   align-items: center;
   height: 25rem;
   gap: 2rem;
+  min-width: 70rem;
 }
 
 footer > p {
@@ -413,6 +493,10 @@ footer .contact input::placeholder {
   letter-spacing: 0.1rem;
 }
 
+footer .contact input:focus {
+  border: 0.1rem solid #ef4444;
+}
+
 footer .contact button {
   padding: 1rem 1.5rem;
   color: white;
@@ -420,8 +504,15 @@ footer .contact button {
   border-radius: 0.3rem;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.1rem;
+}
+
+footer .contact button:hover {
+  background-color: white;
+  color: #ef4444;
+  border: 0.1rem solid #ef4444;
 }
 
 footer nav {
@@ -430,7 +521,7 @@ footer nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 10rem;
+  padding: 2rem 5rem;
 }
 
 footer nav .nav-group {
@@ -443,6 +534,13 @@ footer nav .nav-group {
 footer nav .nav-group a {
   color: white;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+footer nav .nav-group a:hover {
+  color: #ef4444;
 }
 
 footer nav .nav-group .bookmark {
@@ -454,4 +552,9 @@ footer nav .social-group {
   align-items: center;
   list-style: none;
   gap: 2rem;
+}
+
+footer nav .social-group li:hover .facebook,
+li:hover .twitter {
+  fill: #ef4444;
 }
