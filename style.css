@@ -92,6 +92,10 @@ header .hero-img {
   z-index: 0;
 }
 
+header .hero-img svg {
+  transform: scale(0.9);
+}
+
 header .hero-img::after {
   content: "";
   height: 20rem;
@@ -174,6 +178,7 @@ header .hero-img::after {
   position: absolute;
   right: 0;
   top: 4rem;
+  transform: scale(0.9);
 }
 
 .features .tab-content-img::after {
@@ -220,7 +225,9 @@ header .hero-img::after {
 
 .extensions {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr 1fr;
+  grid-template-columns:
+    1fr minmax(16rem, 1.2fr) minmax(16rem, 1.2fr) minmax(16rem, 1.2fr)
+    1fr;
   grid-template-rows: 15rem 25rem;
   grid-template-areas:
     ". info info info ."
