@@ -585,7 +585,7 @@ li:hover .twitter {
   header nav {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    /* background: rgba(0, 0, 0, 0.9); */
     position: fixed;
     top: 0;
     display: flex;
@@ -595,20 +595,19 @@ li:hover .twitter {
     flex-wrap: wrap;
   }
 
+  .modal-container {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .modal {
+    fill: white;
+  }
+
   header nav > div {
     padding-top: 2rem;
   }
 
-  header nav > div .header-bookmark {
-    fill: white;
-  }
-
   header nav .nav-toggle {
     padding-top: 2rem;
-  }
-
-  header nav .nav-toggle svg {
-    fill: white;
   }
 
   header nav .nav-checkbox:checked ~ .nav-bar {
