@@ -582,10 +582,10 @@ li:hover .twitter {
     width: 1.5rem;
   }
 
-  header nav {
+  .modal-container {
     width: 100%;
     height: 100%;
-    /* background: rgba(0, 0, 0, 0.9); */
+    background: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     display: flex;
@@ -595,9 +595,6 @@ li:hover .twitter {
     flex-wrap: wrap;
   }
 
-  .modal-container {
-    background: rgba(0, 0, 0, 0.9);
-  }
   .modal {
     fill: white;
   }
