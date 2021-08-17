@@ -282,16 +282,15 @@ header .hero-img::after {
 
 .extensions {
   display: grid;
-  grid-template-columns:
-    1fr minmax(16rem, 1.2fr) minmax(16rem, 1.2fr) minmax(16rem, 1.2fr)
-    1fr;
+  grid-template-columns: 1fr 15rem 0.2fr 15rem 0.2fr 15rem 1fr;
   grid-template-rows: 15rem 25rem;
   grid-template-areas:
-    ". info info info ."
-    ". chrome firefox opera .";
+    ". info info info info info ."
+    ". chrome . firefox . opera .";
 
   position: relative;
   /* background-color: pink; */
+  min-width: 70rem;
 }
 
 .extension-info {
@@ -319,18 +318,21 @@ header .hero-img::after {
   grid-area: chrome;
   position: absolute;
   top: 0;
+  /* background-color: red; */
 }
 
 .extension-firefox {
   grid-area: firefox;
   position: absolute;
   top: 2.5rem;
+  /* background-color: blue; */
 }
 
 .extension-opera {
   grid-area: opera;
   position: absolute;
   bottom: 0;
+  /* background-color: chartreuse; */
 }
 
 .extension {
@@ -386,6 +388,7 @@ header .hero-img::after {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  min-width: 70rem;
 }
 
 .faq > div {
@@ -770,6 +773,7 @@ li:hover .twitter {
       ". opera .";
 
     /* position: relative; */
+    min-width: 0;
   }
 
   .extension-info > div {
@@ -783,8 +787,13 @@ li:hover .twitter {
     text-align: center;
   }
 
+  .faq {
+    min-width: 0;
+  }
+
   footer {
     height: 45rem;
+    min-width: 0;
   }
 
   footer > div {
