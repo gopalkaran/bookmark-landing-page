@@ -439,7 +439,7 @@ header .hero-img::after {
   /* background-color: brown; */
   max-width: 30rem;
   width: 100%;
-  min-width: 23rem;
+  /* min-width: 23rem; */
 }
 
 .faq ul li {
@@ -871,15 +871,58 @@ li:hover .twitter {
 }
 
 @media only screen and (max-width: 550px) {
+  header nav {
+    padding: 1rem 2rem;
+  }
   header .hero-img svg {
     transform: scale(0.6);
-    right: -5rem;
+    right: -7rem;
   }
 
   header .hero-img::after {
     height: 15rem;
     width: 20rem;
     bottom: 5rem;
+  }
+
+  header .hero-info .hero-title {
+    font-size: 1.5rem;
+  }
+
+  header .hero-info p {
+    font-size: 0.8rem;
+  }
+
+  header .hero-info .btn-group a {
+    font-size: 0.6rem;
+  }
+
+  .features .feature-info {
+    padding: 0 5rem;
+  }
+
+  .features .feature-info div {
+    font-size: 1.5rem;
+  }
+
+  .features .feature-info p {
+    font-size: 0.8rem;
+  }
+
+  .features .tab ul li {
+    font-size: 0.8rem;
+  }
+
+  .features .tab-content-info > div {
+    font-size: 1.5rem;
+  }
+
+  .features .tab-content-info > p {
+    font-size: 0.8rem;
+  }
+
+  .features .tab-content-info > a {
+    font-size: 0.6rem;
   }
 
   .features .tab-content-img svg {
@@ -903,5 +946,158 @@ li:hover .twitter {
   .features .tab-content-img::after {
     height: 15rem;
     width: 20rem;
+  }
+
+  .extensions .extension-info {
+    padding: 0 5rem;
+  }
+
+  .extensions .extension-info > div {
+    font-size: 1.5rem;
+  }
+
+  .extensions .extension-info > p {
+    font-size: 0.8rem;
+  }
+
+  .extensions .extension button {
+    font-size: 0.6rem;
+  }
+
+  .faq > div {
+    font-size: 1.5rem;
+  }
+
+  .faq > p {
+    font-size: 0.8rem;
+  }
+
+  .faq > ul li {
+    font-size: 0.8rem;
+  }
+
+  .faq > button {
+    font-size: 0.6rem;
+  }
+
+  footer > p {
+    font-size: 0.7rem;
+  }
+
+  footer > div {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  footer .contact input {
+    font-size: 0.8rem;
+  }
+
+  footer .contact button {
+    font-size: 0.6rem;
+  }
+
+  footer nav .nav-group li a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  header {
+    grid-template-rows: 5rem 15rem 2rem 20rem;
+    grid-template-areas:
+      "nav"
+      "heroImg"
+      "."
+      "heroInfo";
+  }
+  header nav {
+    padding: 1rem;
+  }
+
+  header .hero-info {
+    padding: 1rem;
+  }
+
+  header .hero-info .btn-group a {
+    padding: 0.8rem;
+  }
+
+  header .hero-img svg {
+    transform: scale(0.4);
+    right: -12rem;
+    top: -6rem;
+  }
+
+  header .hero-img::after {
+    height: 10rem;
+    width: 13rem;
+    bottom: 0;
+  }
+
+  .features .feature-info {
+    padding: 1rem;
+  }
+
+  .features .tab-content-img {
+    position: relative;
+  }
+
+  .features .tab-content-img svg {
+    position: absolute;
+    left: -8rem;
+    top: -2rem;
+    transform: scale(0.4);
+  }
+
+  #search-img svg {
+    top: -3rem;
+    left: -6rem;
+    transform: scale(0.4);
+  }
+
+  #share-img svg {
+    top: -2rem;
+    left: -5rem;
+    transform: scale(0.4);
+  }
+
+  .features .tab-content-img::after {
+    height: 10rem;
+    width: 13rem;
+  }
+
+  .tab ul li.active {
+    color: #444;
+  }
+
+  .tab ul li.active::after {
+    width: 10rem;
+    bottom: 0;
+  }
+
+  .faq {
+    padding: 2rem;
+  }
+
+  .extensions .extension-info {
+    padding: 2rem;
+  }
+
+  .features {
+    grid-template-rows: 12rem 12rem 20rem 20rem;
+    padding: 2rem 0 0 0;
+  }
+
+  .features .feature-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .features .tab {
+    margin-top: 1rem;
+  }
+
+  .features .tab-content-info {
+    padding: 2rem;
   }
 }
