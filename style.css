@@ -241,9 +241,21 @@ header .hero-img::after {
   border-radius: 0.5rem;
   background-color: #ddd;
   position: absolute;
-  left: 1.5rem;
+  left: 5rem;
   top: 4rem;
   transform: scale(0.8);
+}
+
+#search-img svg {
+  top: 3rem;
+  left: 5rem;
+  transform: scale(0.8);
+}
+
+#share-img svg {
+  top: 4rem;
+  left: 5rem;
+  transform: scale(0.9);
 }
 
 .features .tab-content-img::after {
@@ -773,6 +785,18 @@ li:hover .twitter {
     transform: scale(0.7);
   }
 
+  #search-img svg {
+    top: 2rem;
+    left: 2rem;
+    transform: scale(0.7);
+  }
+
+  #share-img svg {
+    top: 2rem;
+    left: 3rem;
+    transform: scale(0.8);
+  }
+
   .features .tab-content-img::after {
     height: 16rem;
     width: 25rem;
@@ -853,16 +877,31 @@ li:hover .twitter {
   }
 
   header .hero-img::after {
-    content: "";
     height: 15rem;
-    width: 21rem;
-    background-color: #6366f1;
-    display: block;
-    border-top-left-radius: 10rem;
-    border-bottom-left-radius: 10rem;
-    position: absolute;
+    width: 20rem;
     bottom: 5rem;
-    right: 0;
-    z-index: -1;
+  }
+
+  .features .tab-content-img svg {
+    left: -3rem;
+    top: 5rem;
+    transform: scale(0.6);
+  }
+
+  #search-img svg {
+    top: 2rem;
+    left: -1rem;
+    transform: scale(0.6);
+  }
+
+  #share-img svg {
+    top: 3rem;
+    left: 0;
+    transform: scale(0.6);
+  }
+
+  .features .tab-content-img::after {
+    height: 15rem;
+    width: 20rem;
   }
 }
