@@ -205,6 +205,11 @@ header .hero-img::after {
   /* background-color: tomato; */
   padding: 0 3rem;
   color: #777;
+  font-weight: 500;
+}
+
+.tab ul li.active {
+  color: #444;
 }
 
 .tab ul li:hover {
@@ -562,6 +567,24 @@ footer nav .social-group {
 footer nav .social-group li:hover .facebook,
 li:hover .twitter {
   fill: #ef4444;
+}
+
+[data-tab-content-img] {
+  display: none;
+}
+
+.active[data-tab-content-img] {
+  display: block;
+}
+
+[data-tab-content-info] {
+  /* display: none; */
+  visibility: hidden;
+}
+
+.active[data-tab-content-info] {
+  /* display: flex; */
+  visibility: visible;
 }
 
 @media only screen and (max-width: 750px) {
