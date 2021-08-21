@@ -47,3 +47,20 @@ tabs.forEach(tab => {
     })
 })
 
+const qnaList = document.querySelectorAll('[data-qna]');
+console.log(qnaList)
+const answerList = document.querySelectorAll('[data-answer]')
+console.log(answerList)
+qnaList.forEach( qna => {
+
+    qna.addEventListener('click', () => {
+        const [ , arrow ,answer] = qna.children;
+        answer.classList.toggle('active');
+
+        const [svg] = arrow.children;
+        svg.classList.toggle('arrow-rotate');
+        const [path] = svg.children;
+        path.classList.toggle('arrow-color');
+    })
+    
+})

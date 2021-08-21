@@ -452,6 +452,29 @@ header .hero-img::after {
   border-top: 1px solid #777;
   padding: 1rem 1rem 1rem 0;
   cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.faq ul .qna .answer {
+  width: 100%;
+  margin-top: 2rem;
+  color: #777;
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
+}
+
+.arrow-color {
+  stroke: #ef4444;
+}
+
+[data-answer] {
+  display: none;
+}
+
+.active[data-answer] {
+  display: block;
 }
 
 .faq ul li:hover {
