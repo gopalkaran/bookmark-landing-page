@@ -12,6 +12,7 @@ body {
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.1rem;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header {
